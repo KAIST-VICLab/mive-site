@@ -247,8 +247,76 @@
 </section>
 <!-- Method -->
 
-<!-- MIVE Editing Results -->
+<!--Dataset-->
 <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">MIVE Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We also present our new MIVE Dataset specifically designed for multi-instance video editing tasks.
+            MIVE Dataset features 200 diverse videos sourced from the VIPSeg dataset.
+          </p>
+
+          <p>
+            We generated and summarized the source captions using LLaVa and Llama 3, respectively.
+            We then manually inserted tags in the source captions to establish instance-to-mask correspondence.
+            Finally, we generated the target edit captions using Llama 3.
+            We show a sample input video and source and target captions below.
+            The target instance captions are color-coded to match the color of the masks.
+          </p>
+
+          <table width="690" align="center">
+            <tr>
+              <th style="font-size: 14px; width: 300px" align="left">
+                Source Caption: In a domestic setting, a person in a gray hoodie stands in front of
+                washing machine A and washing machine B against a blue wall, with a blue
+                recycling trash can to the left.
+                <br/>
+                <br/>
+                Source Video:
+              </th>
+
+              <th style="font-size: 14px; width: 300px" align="left">
+                Target Caption: In a domestic setting, an <span style="color: rgb(255, 0, 0)">alien</span>
+                stands in front of <span style="color: rgb(242, 219, 10)">oven</span>
+                and <span style="color: rgb(0, 255, 0)">yellow washing machine</span> against
+                a blue wall, with a blue recycling trash can to the left.
+                <br/>
+                <br/>
+                Masked Source Video:
+              </th>
+            </tr>
+
+            <tr>
+              <th>
+                <video preload="auto" poster="" id="tree" autoplay controls muted loop height="100%">
+                  <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_input.mp4"
+                  type="video/mp4">
+                </video>
+              </th>
+
+              <th>
+                <video preload="auto" poster="" id="tree" autoplay controls muted loop height="100%">
+                  <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_masked_frames.mp4"
+                  type="video/mp4">
+                </video>
+              </th>
+
+            </tr>
+          </table>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Dataset -->
+
+<!-- MIVE Editing Results -->
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -334,7 +402,7 @@
 <!-- MIVE Editing Results -->
 
 <!-- Comparison -->
-<section class="section hero">
+<section class="section hero is-light">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -345,6 +413,7 @@
             <h2 class="title is-6 has-text-justified">
               Attention leakage examples are shown in <span style="color: rgb(0, 255, 0)">green arrows</span>
               while unfaithful editing examples are shown in <span style="color: rgb(255, 0, 0)">red arrows</span>.
+              The target instance captions are color-coded to match the color of the masks.
             </h2>
           </div>
 
@@ -1032,13 +1101,18 @@
 <!--&lt;!&ndash; End image carousel &ndash;&gt;-->
 
 <!--BibTex citation -->
-<!--  <section class="section" id="BibTeX">-->
-<!--    <div class="container is-max-desktop content">-->
-<!--      <h2 class="title">BibTeX</h2>-->
-<!--      <pre><code>BibTex Code Here</code></pre>-->
-<!--    </div>-->
-<!--</section>-->
-<!--End BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{teodoro2024mive,
+  title={MIVE: New Design and Benchmark for Multi-Instance Video Editing},
+  author={Samuel Teodoro and Agus Gunawan and Soo Ye Kim and Jihyong Oh and Munchurl Kim},
+  journal={arXiv preprint arXiv:2412.12877},
+  year={2024}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation-->
 
 
   <footer class="footer">
@@ -1057,7 +1131,7 @@
       </div>
 
       <a href="https://mapmyvisitors.com/web/1bx6b"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=qBce1aYVqksuAXyLho4tlQp5WTYJK40bYNYtaBWxIOc&cl=ffffff" /></a>
-      
+
     </div>
   </div>
 </footer>
@@ -1066,7 +1140,7 @@
   
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
+<!-- End of Statcounter Code -->
 
   </body>
   </html>
